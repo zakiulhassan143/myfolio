@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Zaki Ul Hassan</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        accent: {
+                            light: "#14b8a6", // teal-500
+                            dark: "#2dd4bf", // teal-400
+                        },
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            "0%": { opacity: "0", transform: "translateY(20px)" },
+                            "100%": { opacity: "1", transform: "translateY(0)" },
+                        },
+                    },
+                    animation: {
+                        fadeInUp: "fadeInUp 0.6s ease-out forwards",
+                    },
+                },
+            },
+        };
+    </script>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+            transition: background-color 0.5s;
+        }
+    
+        .dark body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+    
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="transition-colors duration-500">
+
+    <!-- Navbar -->
+    <nav
+        class="fixed top-4 left-4 right-4 z-50 backdrop-blur-md bg-white/70 dark:bg-gray-900/70 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-lg animate-fadeInUp transition-colors duration-500">
+        <div class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
+
+            <!-- Logo -->
+            <div
+                class="text-2xl font-extrabold tracking-tight cursor-pointer select-none text-gray-900 dark:text-white hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-300">
+                Zaki<span class="text-accent-light dark:text-accent-dark">Site</span>
+            </div>
+
+            <!-- Desktop Links -->
+            <ul class="hidden md:flex gap-8 text-gray-700 dark:text-gray-300 font-semibold">
+                <li><a href="/index.html#home"
+                        class="hover:text-accent-light dark:hover:text-accent-dark transition">Home</a></li>
+            </ul>
+
+            <!-- Right Controls -->
+            <div class="flex items-center gap-4">
+                <!-- Dark Mode Toggle -->
+                <button id="theme-toggle" aria-label="Toggle Dark Mode"
+                    class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+                    title="Toggle Dark Mode">
+                    <span id="theme-icon"
+                        class="material-symbols-outlined text-gray-900 dark:text-white">dark_mode</span>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" aria-label="Toggle Menu"
+                    class="md:hidden p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+                    <span class="material-symbols-outlined text-gray-900 dark:text-white">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-5 pb-5 border-t border-gray-200 dark:border-gray-700">
+            <ul class="flex flex-col gap-4 text-gray-700 dark:text-gray-300 font-semibold">
+                <li><a href="/index.html#home"
+                        class="block hover:text-accent-light dark:hover:text-accent-dark transition">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-28 px-6 max-w-5xl mx-auto text-center animate-fadeInUp transition-colors duration-500">
+        <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-gray-900 dark:text-white">
+            Zaki Ul Hassan
+            <span class="text-accent-light dark:text-accent-dark">
+                Video Editor, Graphics Designer</span>
+        </h1>
+        <p class="max-w-xl mx-auto text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8">
+            Editing, that your
+            <span class="text-accent-light dark:text-accent-dark"> Audiance</span>
+            will love.
+        </p>
+        <div class="flex justify-center gap-5">
+            <a href="/index.html#contact"
+                class="bg-accent-light dark:bg-accent-dark text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition shadow-teal-400/50 hover:scale-105">Contact
+                me</a>
+            <a href="https://ik.imagekit.io/iyfpmn8ya/Zaki%20Ul%20Hassan.pdf?updatedAt=1749065212310"
+                class="border-2 border-accent-light dark:border-accent-dark text-accent-light dark:text-accent-dark font-semibold px-6 py-3 rounded-lg hover:bg-accent-light hover:text-white dark:hover:bg-accent-dark dark:hover:text-white transition">Download
+                CV</a>
+        </div>
+    </section>
+
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="mt-20 max-w-4xl mx-auto px-6 mb-16">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-6 text-center text-gray-900 dark:text-white">
+            Certificates
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
+
+            <div class="group p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer"
+                onclick="window.open('https://ik.imagekit.io/iyfpmn8ya/Certificates/Video%20Editing%20(Digiskills).png?updatedAt=1749062765672', '_blank')"
+                title="Video Editing - DigiSkills.pk">
+                <div class="w-20 h-6 bg-gray-300 dark:bg-gray-700 rounded-t-md shadow-md -mb-6"></div>
+                <img src="https://ik.imagekit.io/iyfpmn8ya/Certificates/Video%20Editing%20(Digiskills).png?updatedAt=1749062765672"
+                    alt="Video Editing - DigiSkills.pk" class="w-full object-contain rounded-md shadow-sm" />
+                <h3 class="text-xl font-semibold mt-4 dark:text-white">Video Editing - DigiSkills.pk</h3>
+            </div>
+
+            <div class="group p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer"
+                onclick="window.open('https://ik.imagekit.io/iyfpmn8ya/Certificates/Freelancing%20(Digiskills).png?updatedAt=1749062765815', '_blank')"
+                title="Freelancing - DigiSkills.pk">
+                <div class="w-20 h-6 bg-gray-300 dark:bg-gray-700 rounded-t-md shadow-md -mb-6"></div>
+                <img src="https://ik.imagekit.io/iyfpmn8ya/Certificates/Freelancing%20(Digiskills).png?updatedAt=1749062765815"
+                    alt="Freelancing - DigiSkills.pk" class="w-full object-contain rounded-md shadow-sm" />
+                <h3 class="text-xl font-semibold mt-4 dark:text-white">Freelancing - DigiSkills.pk</h3>
+            </div>
+
+            <div class="group p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer"
+                onclick="window.open('https://ik.imagekit.io/iyfpmn8ya/Certificates/Streamlining%20Your%20Work%20with%20Microsoft%20Copilot%20(LinkedIn%20Learning).png?updatedAt=1749062779942', '_blank')"
+                title="Streamlining Your Workflow with Microsoft Copilot - LinkedIn Learning">
+                <div class="w-20 h-6 bg-gray-300 dark:bg-gray-700 rounded-t-md shadow-md -mb-6"></div>
+                <img src="https://ik.imagekit.io/iyfpmn8ya/Certificates/Streamlining%20Your%20Work%20with%20Microsoft%20Copilot%20(LinkedIn%20Learning).png?updatedAt=1749062779942"
+                    alt="Streamlining Your Workflow with Microsoft Copilot - LinkedIn Learning"
+                    class="w-full object-contain rounded-md shadow-sm" />
+                <h3 class="text-xl font-semibold mt-4 dark:text-white">Streamlining Your Workflow with Microsoft Copilot
+                </h3>
+            </div>
+
+            <div class="group p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer"
+                onclick="window.open('https://ik.imagekit.io/iyfpmn8ya/Certificates/Generative%20AI%20The%20Evolution%20of%20Thoughtful%20Online%20Search%20(LinkedIn%20Learning).png?updatedAt=1749062780153', '_blank')"
+                title="Generative AI: The Evolution of Thoughtful online search - LinkedIn Learning">
+                <div class="w-20 h-6 bg-gray-300 dark:bg-gray-700 rounded-t-md shadow-md -mb-6"></div>
+                <img src="https://ik.imagekit.io/iyfpmn8ya/Certificates/Generative%20AI%20The%20Evolution%20of%20Thoughtful%20Online%20Search%20(LinkedIn%20Learning).png?updatedAt=1749062780153"
+                    alt="Generative AI: The Evolution of Thoughtful online search - LinkedIn Learning"
+                    class="w-full object-contain rounded-md shadow-sm" />
+                <h3 class="text-xl font-semibold mt-4 dark:text-white">Generative AI: The Evolution of Thoughtful Online
+                    Search</h3>
+            </div>
+
+            <div class="group p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer"
+                onclick="window.open('https://ik.imagekit.io/iyfpmn8ya/Certificates/Career%20Essentials%20in%20Generative%20AI%20(Microsoft%20and%20LinkedIn).png?updatedAt=1749062781073', '_blank')"
+                title="Career Essentials in Generative AI - Microsoft and LinkedIn Learning">
+                <div class="w-20 h-6 bg-gray-300 dark:bg-gray-700 rounded-t-md shadow-md -mb-6"></div>
+                <img src="https://ik.imagekit.io/iyfpmn8ya/Certificates/Career%20Essentials%20in%20Generative%20AI%20(Microsoft%20and%20LinkedIn).png?updatedAt=1749062781073"
+                    alt="Career Essentials in Generative AI - Microsoft and LinkedIn Learning"
+                    class="w-full object-contain rounded-md shadow-sm" />
+                <h3 class="text-xl font-semibold mt-4 dark:text-white">Career Essentials in Generative AI</h3>
+            </div>
+
+            <div class="group p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer"
+                onclick="window.open('https://ik.imagekit.io/iyfpmn8ya/Certificates/Ethics%20in%20the%20Age%20of%20Generative%20AI%20(NASBA)%20.png?updatedAt=1749062782267', '_blank')"
+                title="Ethics in the Age of Generative AI - LinkedIn Learning">
+                <div class="w-20 h-6 bg-gray-300 dark:bg-gray-700 rounded-t-md shadow-md -mb-6"></div>
+                <img src="https://ik.imagekit.io/iyfpmn8ya/Certificates/Ethics%20in%20the%20Age%20of%20Generative%20AI%20(NASBA)%20.png?updatedAt=1749062782267"
+                    alt="Ethics in the Age of Generative AI - LinkedIn Learning"
+                    class="w-full object-contain rounded-md shadow-sm" />
+                <h3 class="text-xl font-semibold mt-4 dark:text-white">Ethics in the Age of Generative AI</h3>
+            </div>
+
+            <div class="group p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer"
+                onclick="window.open('https://ik.imagekit.io/iyfpmn8ya/Certificates/Google%20Soft%20Skills%20(PAFLA%20X%20GOOGLE).png?updatedAt=1749062789619', '_blank')"
+                title="Google Softskills Program - PAFLA X GOOGLE">
+                <div class="w-20 h-6 bg-gray-300 dark:bg-gray-700 rounded-t-md shadow-md -mb-6"></div>
+                <img src="https://ik.imagekit.io/iyfpmn8ya/Certificates/Google%20Soft%20Skills%20(PAFLA%20X%20GOOGLE).png?updatedAt=1749062789619"
+                    alt="Google Softskills Program - PAFLA X GOOGLE"
+                    class="w-full object-contain rounded-md shadow-sm" />
+                <h3 class="text-xl font-semibold mt-4 dark:text-white">Google Softskills Program - PAFLA X GOOGLE</h3>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 py-10">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+
+                <!-- Brand Name -->
+                <div
+                    class="text-2xl font-extrabold tracking-tight cursor-pointer select-none text-gray-900 dark:text-white hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-300">
+                    Zaki<span class="text-accent-light dark:text-accent-dark">Site</span>
+                </div>
+
+                <!-- Socials Section with Tooltips -->
+                <section id="socials" class="flex space-x-12">
+                    <!-- Instagram -->
+                    <a href="https://instagram.com/ofcourse.zaki" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram" class="relative group">
+                        <svg class="w-8 h-8 hover:text-pink-500 transition-colors duration-300" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm5.25-.5a1 1 0 110 2 1 1 0 010-2z" />
+                        </svg>
+                        <span
+                            class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-pink-500 px-3 py-1 text-xs text-white opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300">
+                            @ofcourse.zaki
+                        </span>
+                    </a>
+
+                    <!-- Email (Gmail) -->
+                    <a href="mailto:zakiulhassan105@gmail.com" aria-label="Email" class="relative group">
+                        <svg class="w-8 h-8 hover:text-red-500 transition-colors duration-300" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <rect x="3" y="5" width="18" height="14" rx="2" ry="2" />
+                            <path d="M3 7l9 6 9-6" />
+                        </svg>
+                        <span
+                            class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-red-500 px-3 py-1 text-xs text-white opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300">
+                            zakiulhassan105@gmail.com
+                        </span>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="https://linkedin.com/in/zakiuhh" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn" class="relative group">
+                        <svg class="w-8 h-8 hover:text-blue-600 transition-colors duration-300" fill="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path
+                                d="M4.983 3.5C4.983 4.604 4.12 5.5 3.002 5.5 1.884 5.5 1 4.604 1 3.5 1 2.396 1.884 1.5 3.002 1.5c1.118 0 1.981.896 1.981 2zm.02 4.5H1v14h4v-14zm7.5 0h-3.75v14h4v-7c0-3.87 5-4.18 5 0v7h4v-8c0-7.24-7.72-6.96-9.25-3.4V8z" />
+                        </svg>
+                        <span
+                            class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-blue-600 px-3 py-1 text-xs text-white opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300">
+                            @zakiuhh
+                        </span>
+                    </a>
+                </section>
+                </section>
+            </div>
+
+            <!-- Copyright -->
+            <p class="text-center mt-8 text-sm text-gray-500 dark:text-gray-600">
+                &copy; 2025 ZakiSite. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+
+        // Dark mode toggle
+        const themeToggle = document.getElementById("theme-toggle");
+        const themeIcon = document.getElementById("theme-icon");
+        const root = document.documentElement;
+
+        // Check stored preference
+        if (
+            localStorage.getItem("theme") === "dark" ||
+            (!("theme" in localStorage) &&
+                window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+            root.classList.add("dark");
+            themeIcon.textContent = "light_mode";
+        }
+
+        themeToggle.addEventListener("click", () => {
+            if (root.classList.contains("dark")) {
+                root.classList.remove("dark");
+                localStorage.setItem("theme", "light");
+                themeIcon.textContent = "dark_mode";
+            } else {
+                root.classList.add("dark");
+                localStorage.setItem("theme", "dark");
+                themeIcon.textContent = "light_mode";
+            }
+        });
+
+        // Scroll animations with Intersection Observer
+        const animatedElements = document.querySelectorAll("[data-animate]");
+        const observerOptions = {
+            threshold: 0.1,
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("animate-fadeInUp");
+                    entry.target.classList.remove("opacity-0", "translate-y-8");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Smooth scroll with offset for fixed navbar height
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute("href"));
+                const offset = 80; // navbar height + margin
+                if (target) {
+                    const topPos =
+                        target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({
+                        top: topPos,
+                        behavior: "smooth",
+                    });
+                    // Close mobile menu on nav click (if open)
+                    if (!mobileMenu.classList.contains("hidden")) {
+                        mobileMenu.classList.add("hidden");
+                    }
+                }
+            });
+        });
+
+        animatedElements.forEach((el) => {
+            observer.observe(el);
+        });
+
+        document.querySelectorAll('a[href^="index.html#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const url = new URL(this.href);
+                const currentUrl = window.location.href.split('#')[0];
+                if (url.pathname.endsWith('index.html') && url.origin === window.location.origin) {
+                    // Same page, smooth scroll
+                    e.preventDefault();
+                    const targetId = url.hash;
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        window.scrollTo({
+                            top: target.getBoundingClientRect().top + window.pageYOffset - 80, // offset for navbar height
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+                // else do nothing special (regular navigation)
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

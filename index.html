@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zaki Ul Hassan</title>
+
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            accent: {
+              light: "#14b8a6", // teal-500
+              dark: "#2dd4bf", // teal-400
+            },
+          },
+          keyframes: {
+            fadeInUp: {
+              "0%": { opacity: "0", transform: "translateY(20px)" },
+              "100%": { opacity: "1", transform: "translateY(0)" },
+            },
+          },
+          animation: {
+            fadeInUp: "fadeInUp 0.6s ease-out forwards",
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+      transition: background-color 0.5s;
+    }
+
+    .dark body {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    }
+  </style>
+</head>
+
+<body class="transition-colors duration-500">
+
+  <!-- Navbar -->
+  <nav
+    class="fixed top-4 left-4 right-4 z-50 backdrop-blur-md bg-white/70 dark:bg-gray-900/70 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-lg animate-fadeInUp transition-colors duration-500">
+    <div class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
+
+      <!-- Logo -->
+      <div
+        class="text-2xl font-extrabold tracking-tight cursor-pointer select-none text-gray-900 dark:text-white hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-300">
+        Zaki<span class="text-accent-light dark:text-accent-dark">Site</span>
+      </div>
+
+      <!-- Desktop Links -->
+      <ul class="hidden md:flex gap-8 text-gray-700 dark:text-gray-300 font-semibold">
+        <li><a href="#home" class="hover:text-accent-light dark:hover:text-accent-dark transition">Home</a></li>
+        <li><a href="#about" class="hover:text-accent-light dark:hover:text-accent-dark transition">About</a></li>
+        <li><a href="#features" class="hover:text-accent-light dark:hover:text-accent-dark transition">Features</a></li>
+        <li><a href="#testimonials"
+            class="hover:text-accent-light dark:hover:text-accent-dark transition">Testimonials</a></li>
+      </ul>
+
+      <!-- Right Controls -->
+      <div class="flex items-center gap-4">
+        <!-- Dark Mode Toggle -->
+        <button id="theme-toggle" aria-label="Toggle Dark Mode"
+          class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition" title="Toggle Dark Mode">
+          <span id="theme-icon" class="material-symbols-outlined text-gray-900 dark:text-white">dark_mode</span>
+        </button>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" aria-label="Toggle Menu"
+          class="md:hidden p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+          <span class="material-symbols-outlined text-gray-900 dark:text-white">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-5 pb-5 border-t border-gray-200 dark:border-gray-700">
+      <ul class="flex flex-col gap-4 text-gray-700 dark:text-gray-300 font-semibold">
+        <li><a href="#home" class="block hover:text-accent-light dark:hover:text-accent-dark transition">Home</a></li>
+        <li><a href="#about" class="block hover:text-accent-light dark:hover:text-accent-dark transition">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- Hero Section -->
+  <section id="home" class="pt-28 px-6 max-w-5xl mx-auto text-center animate-fadeInUp transition-colors duration-500">
+    <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-gray-900 dark:text-white">
+      Zaki Ul Hassan
+      <span class="text-accent-light dark:text-accent-dark">
+        Video Editor, Graphics Designer</span>
+    </h1>
+    <p class="max-w-xl mx-auto text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8">
+      Editing, that your
+      <span class="text-accent-light dark:text-accent-dark"> Audiance</span>
+      will love.
+    </p>
+    <div class="flex justify-center gap-5">
+      <a href="#contact"
+        class="bg-accent-light dark:bg-accent-dark text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition shadow-teal-400/50 hover:scale-105">Contact
+        me</a>
+      <a href="https://ik.imagekit.io/iyfpmn8ya/Zaki%20Ul%20Hassan.pdf?updatedAt=1749065212310"
+        class="border-2 border-accent-light dark:border-accent-dark text-accent-light dark:text-accent-dark font-semibold px-6 py-3 rounded-lg hover:bg-accent-light hover:text-white dark:hover:bg-accent-dark dark:hover:text-white transition">Download
+        CV</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="mt-20 max-w-4xl mx-auto px-6 mb-16">
+    <h2 class="text-3xl md:text-4xl font-extrabold mb-6 text-center text-gray-900 dark:text-white">
+      About Me
+    </h2>
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 md:p-12 max-w-3xl mx-auto text-center">
+      <p class="text-gray-700 dark:text-gray-300 text-base md:text-lg leading-relaxed">
+        Hi, I’m Zaki Ul Hassan. I’m a video editor and graphics designer. I also like computing and AI, and I’m always
+        trying to learn new things about them.
+      </p>
+      <p class="text-gray-700 dark:text-gray-300 text-base md:text-lg leading-relaxed mt-4">
+        I enjoy creating cool videos and designs, and I’m excited to keep growing in these areas.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- Features Section -->
+  <section id="features" class="mt-20 max-w-6xl mx-auto px-6 text-center md:text-left grid md:grid-cols-3 gap-12">
+    <!-- Invisible Card with Centered Heading -->
+    <div class="w-full h-10 col-span-full mb-12">
+      <div class="p-6 rounded-xl text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white">
+          Features of My <span class="text-accent-light dark:text-accent-dark">Work</span>
+        </h2>
+      </div>
+    </div>
+    <!-- Trimming & Cuts -->
+    <div
+      class="group p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl opacity-0 translate-y-8"
+      data-animate>
+      <div class="text-5xl mb-4 text-accent-light dark:text-accent-dark">
+        <span class="material-symbols-outlined">content_cut</span>
+      </div>
+      <h3 class="text-xl font-semibold mb-2 dark:text-white">
+        Trimming & Cuts
+      </h3>
+      <p class="text-gray-600 dark:text-gray-300">
+        Clean, sharp cuts for smooth storytelling and fast pacing.
+      </p>
+    </div>
+
+    <!-- Text Effects -->
+    <div
+      class="group p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl opacity-0 translate-y-8"
+      data-animate>
+      <div class="text-5xl mb-4 text-accent-light dark:text-accent-dark">
+        <span class="material-symbols-outlined">format_color_text</span>
+      </div>
+      <h3 class="text-xl font-semibold mb-2 dark:text-white">Text Effects</h3>
+      <p class="text-gray-600 dark:text-gray-300">
+        Animate text with stunning intros, outros, and transitions.
+      </p>
+    </div>
+
+    <!-- Color Grading -->
+    <div
+      class="group p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl opacity-0 translate-y-8"
+      data-animate>
+      <div class="text-5xl mb-4 text-accent-light dark:text-accent-dark">
+        <span class="material-symbols-outlined">palette</span>
+      </div>
+      <h3 class="text-xl font-semibold mb-2 dark:text-white">
+        Color Grading
+      </h3>
+      <p class="text-gray-600 dark:text-gray-300">
+        Set the mood and style with advanced color adjustments.
+      </p>
+    </div>
+
+    <!-- Chroma Key -->
+    <div
+      class="group p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl opacity-0 translate-y-8"
+      data-animate>
+      <div class="text-5xl mb-4 text-accent-light dark:text-accent-dark">
+        <span class="material-symbols-outlined">video_settings</span>
+      </div>
+      <h3 class="text-xl font-semibold mb-2 dark:text-white">Chroma Key</h3>
+      <p class="text-gray-600 dark:text-gray-300">
+        Replace green screen with cinematic backgrounds easily.
+      </p>
+    </div>
+
+    <!-- Masking & Effects -->
+    <div
+      class="group p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl opacity-0 translate-y-8"
+      data-animate>
+      <div class="text-5xl mb-4 text-accent-light dark:text-accent-dark">
+        <span class="material-symbols-outlined">visibility</span>
+      </div>
+      <h3 class="text-xl font-semibold mb-2 dark:text-white">
+        Masking & Effects
+      </h3>
+      <p class="text-gray-600 dark:text-gray-300">
+        Add smooth transitions, overlays, and creative effects.
+      </p>
+    </div>
+
+    <!-- Graphic Design Tools -->
+    <div
+      class="group p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl opacity-0 translate-y-8"
+      data-animate>
+      <div class="text-5xl mb-4 text-accent-light dark:text-accent-dark">
+        <span class="material-symbols-outlined">brush</span>
+      </div>
+      <h3 class="text-xl font-semibold mb-2 dark:text-white">
+        Graphic Tools
+      </h3>
+      <p class="text-gray-600 dark:text-gray-300">
+        Design posters, thumbnails, and stunning visuals with ease.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="relative mt-20 max-w-4xl mx-auto px-6 text-center">
+    <div
+      class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-pink-100 dark:from-gray-800 dark:via-gray-900 dark:to-black rounded-3xl -z-10 blur-2xl opacity-20">
+    </div>
+    <h2 class="text-3xl md:text-4xl font-extrabold mb-8 text-gray-900 dark:text-white">What People Say</h2>
+    <div class="grid gap-8 md:grid-cols-2">
+      <div data-animate class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+        <p class="text-gray-700 dark:text-gray-300 italic mb-4">"Zaki is an amazing editor! Always delivers more than
+          expected."</p>
+        <div class="flex items-center justify-center gap-4">
+          <img src="https://i.pravatar.cc/50?img=1" class="w-10 h-10 rounded-full" />
+          <span class="text-gray-900 dark:text-white font-semibold">John Doe</span>
+        </div>
+      </div>
+      <div data-animate class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+        <p class="text-gray-700 dark:text-gray-300 italic mb-4">"Great work with clean cuts and visuals. Highly
+          recommend!"</p>
+        <div class="flex items-center justify-center gap-4">
+          <img src="https://i.pravatar.cc/50?img=2" class="w-10 h-10 rounded-full" />
+          <span class="text-gray-900 dark:text-white font-semibold">Sarah Khan</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Certificates Section -->
+  <section id="certificates" class="mt-20 max-w-5xl mx-auto px-6 mb-16">
+    <h2 class="text-3xl md:text-4xl font-extrabold mb-10 text-center text-gray-900 dark:text-white">
+      Certificates
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-4xl mx-auto">
+
+      <div
+        class="group p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer"
+        onclick="window.open('https://ik.imagekit.io/iyfpmn8ya/Certificates/Video%20Editing%20(Digiskills).png?updatedAt=1749062765672', '_blank')"
+        title="Video Editing - DigiSkills.pk">
+        <div class="w-20 h-6 bg-gray-300 dark:bg-gray-700 rounded-t-md shadow-md -mb-6"></div>
+        <img
+          src="https://ik.imagekit.io/iyfpmn8ya/Certificates/Video%20Editing%20(Digiskills).png?updatedAt=1749062765672"
+          alt="Video Editing - DigiSkills.pk" class="w-full object-contain rounded-md shadow-sm" />
+        <h3 class="text-xl font-semibold mt-4 dark:text-white">Video Editing - DigiSkills.pk</h3>
+      </div>
+
+      <div
+        class="group p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer"
+        onclick="window.open('https://ik.imagekit.io/iyfpmn8ya/Certificates/Freelancing%20(Digiskills).png?updatedAt=1749062765815', '_blank')"
+        title="Freelancing - DigiSkills.pk">
+        <div class="w-20 h-6 bg-gray-300 dark:bg-gray-700 rounded-t-md shadow-md -mb-6"></div>
+        <img src="https://ik.imagekit.io/iyfpmn8ya/Certificates/Freelancing%20(Digiskills).png?updatedAt=1749062765815"
+          alt="Freelancing - DigiSkills.pk" class="w-full object-contain rounded-md shadow-sm" />
+        <h3 class="text-xl font-semibold mt-4 dark:text-white">Freelancing - DigiSkills.pk</h3>
+      </div>
+
+      <div
+        class="group p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer"
+        onclick="window.open('https://ik.imagekit.io/iyfpmn8ya/Certificates/Streamlining%20Your%20Work%20with%20Microsoft%20Copilot%20(LinkedIn%20Learning).png?updatedAt=1749062779942', '_blank')"
+        title="Streamlining Your Workflow with Microsoft Copilot - LinkedIn Learning">
+        <div class="w-20 h-6 bg-gray-300 dark:bg-gray-700 rounded-t-md shadow-md -mb-6"></div>
+        <img
+          src="https://ik.imagekit.io/iyfpmn8ya/Certificates/Streamlining%20Your%20Work%20with%20Microsoft%20Copilot%20(LinkedIn%20Learning).png?updatedAt=1749062779942"
+          alt="Streamlining Your Workflow with Microsoft Copilot - LinkedIn Learning"
+          class="w-full object-contain rounded-md shadow-sm" />
+        <h3 class="text-xl font-semibold mt-4 dark:text-white">
+          Streamlining Your Workflow with Microsoft Copilot - LinkedIn Learning
+        </h3>
+      </div>
+
+    </div>
+
+    <div class="flex justify-center mt-12">
+      <a href="pages/docu.html"
+        class="border-2 border-accent-light dark:border-accent-dark text-accent-light dark:text-accent-dark font-semibold px-8 py-3 rounded-lg hover:bg-accent-light hover:text-white dark:hover:bg-accent-dark dark:hover:text-white transition">
+        View all
+      </a>
+    </div>
+  </section>
+
+
+
+  <!-- Skills Section -->
+  <section id="skills" class="relative mt-20 max-w-4xl mx-auto px-6 text-center">
+    <!-- Background blur -->
+    <div
+      class="absolute inset-0 -z-10 blur-2xl opacity-20 bg-gradient-to-tr from-purple-200 to-cyan-100 dark:from-gray-800 dark:to-gray-700 rounded-xl">
+    </div>
+
+    <h2 class="text-3xl md:text-4xl font-extrabold mb-8 text-gray-900 dark:text-white">Tools I Use</h2>
+
+    <div class="grid grid-cols-3 sm:grid-cols-4 gap-8 justify-items-center">
+
+      <!-- Tool: CapCut -->
+      <a href="https://www.capcut.com" target="_blank"
+        class="group relative flex flex-col items-center transition-transform duration-500 hover:scale-110">
+
+        <!-- Sparkle Background -->
+        <div class="absolute w-20 h-20 rounded-full blur-2xl opacity-20 bg-purple-400 dark:bg-purple-600 animate-pulse">
+        </div>
+        <img src="/icons/capcut.svg" alt="CapCut"
+          class="w-12 h-12 grayscale group-hover:grayscale-0 transition duration-500 z-10" />
+        <span
+          class="absolute bottom-[-2rem] text-xs bg-black text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 transition-all duration-300 pointer-events-none z-20">
+          capcut.com
+        </span>
+      </a>
+
+      <!-- Tool: InShot -->
+      <a href="https://inshot.com" target="_blank"
+        class="group relative flex flex-col items-center transition-transform duration-500 hover:scale-110">
+        <div class="absolute w-20 h-20 rounded-full blur-2xl opacity-20 bg-pink-400 dark:bg-pink-600 animate-pulse">
+        </div>
+        <img src="/icons/inshot.svg" alt="InShot"
+          class="w-12 h-12 grayscale group-hover:grayscale-0 transition duration-500 z-10" />
+        <span
+          class="absolute bottom-[-2rem] text-xs bg-black text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 transition-all duration-300 pointer-events-none z-20">
+          inshot.com
+        </span>
+      </a>
+
+      <!-- Tool: Canva -->
+      <a href="https://www.canva.com" target="_blank"
+        class="group relative flex flex-col items-center transition-transform duration-500 hover:scale-110">
+        <div class="absolute w-20 h-20 rounded-full blur-2xl opacity-20 bg-blue-400 dark:bg-blue-600 animate-pulse">
+        </div>
+        <img src="/icons/canva.svg" alt="Canva"
+          class="w-12 h-12 grayscale group-hover:grayscale-0 transition duration-500 z-10" />
+        <span
+          class="absolute bottom-[-2rem] text-xs bg-black text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 transition-all duration-300 pointer-events-none z-20">
+          canva.com
+        </span>
+      </a>
+
+      <!-- Tool: Illustrator -->
+      <a href="https://www.adobe.com/products/illustrator.html" target="_blank"
+        class="group relative flex flex-col items-center transition-transform duration-500 hover:scale-110">
+        <div class="absolute w-20 h-20 rounded-full blur-2xl opacity-20 bg-orange-400 dark:bg-orange-600 animate-pulse">
+        </div>
+        <img src="/icons/adobe-illustrator.svg" alt="Illustrator"
+          class="w-12 h-12 grayscale group-hover:grayscale-0 transition duration-500 z-10" />
+        <span
+          class="absolute bottom-[-2rem] text-xs bg-black text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 transition-all duration-300 pointer-events-none z-20">
+          adobe.com
+        </span>
+      </a>
+
+    </div>
+  </section>
+
+
+
+
+  <!-- Why Us Section -->
+  <section id="why-us" class="mt-20 max-w-4xl mx-auto px-6 mb-16">
+    <h2 class="text-3xl md:text-4xl font-extrabold mb-6 text-center text-gray-900 dark:text-white">
+      Why Choose Me?
+    </h2>
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 md:p-12 text-center max-w-3xl mx-auto">
+      <p class="text-gray-700 dark:text-gray-300 text-base md:text-lg leading-relaxed mb-4">
+        I bring a fresh, personal touch to every project. My approach isn’t just about editing or design —
+        it’s about understanding your vision and making it shine. I combine creativity, tech skills, and passion
+        to create videos and visuals your audience will truly love.
+      </p>
+      <p class="text-gray-700 dark:text-gray-300 text-base md:text-lg leading-relaxed">
+        Whether it's a quick edit or a full project, I’m committed to quality and timely delivery. Let’s bring
+        your ideas to life in a way that feels just right for you.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- Quick Stats Section -->
+  <section id="stats" class="relative mt-20 max-w-4xl mx-auto px-6 text-center">
+    <div
+      class="absolute inset-0 -z-10 bg-gradient-to-bl from-yellow-100 to-rose-100 dark:from-gray-700 dark:to-gray-900 blur-2xl opacity-20 rounded-xl">
+    </div>
+    <h2 class="text-3xl md:text-4xl font-extrabold mb-8 text-gray-900 dark:text-white">Quick Stats</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 text-gray-900 dark:text-white">
+      <div data-animate>
+        <h3 class="text-4xl font-bold">5+</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Happy Clients</p>
+      </div>
+      <div data-animate>
+        <h3 class="text-4xl font-bold">10+</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Projects Edited</p>
+      </div>
+      <div data-animate>
+        <h3 class="text-4xl font-bold">2+</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Years Experience</p>
+      </div>
+      <div data-animate>
+        <h3 class="text-4xl font-bold">24/7</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Support</p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Contact Form Section -->
+  <section id="contact" class="mt-16 px-6 max-w-xl mx-auto mb-20">
+    <h2 class="text-3xl font-bold mb-6 text-center text-gray-900 dark:text-white">
+      Contact Me
+    </h2>
+
+    <form id="contactForm" class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg space-y-4">
+      <input type="text" name="name" placeholder="Your name" required
+        class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-transparent text-gray-800 dark:text-white placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-accent-light dark:focus:ring-accent-dark" />
+
+      <input type="email" name="email" placeholder="Email" required
+        class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-transparent text-gray-800 dark:text-white placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-accent-light dark:focus:ring-accent-dark" />
+
+      <textarea name="message" placeholder="Your message..." rows="3" required
+        class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-transparent text-gray-800 dark:text-white placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-accent-light dark:focus:ring-accent-dark"></textarea>
+
+      <button type="submit"
+        class="w-full bg-accent-light dark:bg-accent-dark text-white font-semibold py-2.5 rounded-md hover:shadow-md transition">
+        Send Message
+      </button>
+      <div id="formResponse"
+        class="hidden justify-center items-center gap-2 text-green-500 text-sm font-medium transition-all duration-500 ease-in-out">
+        <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+        <span>Your message has been sent!</span>
+      </div>
+    </form>
+  </section>
+
+
+
+  <!-- Footer Section -->
+  <footer class="bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 py-10">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+
+        <!-- Brand Name -->
+        <div
+          class="text-2xl font-extrabold tracking-tight cursor-pointer select-none text-gray-900 dark:text-white hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-300">
+          Zaki<span class="text-accent-light dark:text-accent-dark">Site</span>
+        </div>
+
+        <!-- Socials Section with Tooltips -->
+        <section id="socials" class="flex space-x-12">
+          <!-- Instagram -->
+          <a href="https://instagram.com/ofcourse.zaki" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+            class="relative group">
+            <svg class="w-8 h-8 hover:text-pink-500 transition-colors duration-300" fill="currentColor"
+              viewBox="0 0 24 24">
+              <path
+                d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm5.25-.5a1 1 0 110 2 1 1 0 010-2z" />
+            </svg>
+            <span
+              class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-pink-500 px-3 py-1 text-xs text-white opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300">
+              @ofcourse.zaki
+            </span>
+          </a>
+
+          <!-- Email (Gmail) -->
+          <a href="mailto:zakiulhassan105@gmail.com" aria-label="Email" class="relative group">
+            <svg class="w-8 h-8 hover:text-red-500 transition-colors duration-300" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="5" width="18" height="14" rx="2" ry="2" />
+              <path d="M3 7l9 6 9-6" />
+            </svg>
+            <span
+              class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-red-500 px-3 py-1 text-xs text-white opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300">
+              zakiulhassan105@gmail.com
+            </span>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com/in/zakiuhh" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+            class="relative group">
+            <svg class="w-8 h-8 hover:text-blue-600 transition-colors duration-300" fill="currentColor"
+              viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path
+                d="M4.983 3.5C4.983 4.604 4.12 5.5 3.002 5.5 1.884 5.5 1 4.604 1 3.5 1 2.396 1.884 1.5 3.002 1.5c1.118 0 1.981.896 1.981 2zm.02 4.5H1v14h4v-14zm7.5 0h-3.75v14h4v-7c0-3.87 5-4.18 5 0v7h4v-8c0-7.24-7.72-6.96-9.25-3.4V8z" />
+            </svg>
+            <span
+              class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-blue-600 px-3 py-1 text-xs text-white opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300">
+              @zakiuhh
+            </span>
+          </a>
+        </section>
+        </section>
+      </div>
+
+      <!-- Copyright -->
+      <p class="text-center mt-8 text-sm text-gray-500 dark:text-gray-600">
+        &copy; 2025 ZakiSite. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Dark mode toggle
+    const themeToggle = document.getElementById("theme-toggle");
+    const themeIcon = document.getElementById("theme-icon");
+    const root = document.documentElement;
+
+    // Check stored preference
+    if (
+      localStorage.getItem("theme") === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      root.classList.add("dark");
+      themeIcon.textContent = "light_mode";
+    }
+
+    themeToggle.addEventListener("click", () => {
+      if (root.classList.contains("dark")) {
+        root.classList.remove("dark");
+        localStorage.setItem("theme", "light");
+        themeIcon.textContent = "dark_mode";
+      } else {
+        root.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+        themeIcon.textContent = "light_mode";
+      }
+    });
+
+    // Scroll animations with Intersection Observer
+    const animatedElements = document.querySelectorAll("[data-animate]");
+    const observerOptions = {
+      threshold: 0.1,
+    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-fadeInUp");
+          entry.target.classList.remove("opacity-0", "translate-y-8");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Smooth scroll with offset for fixed navbar height
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        const offset = 80; // navbar height + margin
+        if (target) {
+          const topPos =
+            target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({
+            top: topPos,
+            behavior: "smooth",
+          });
+          // Close mobile menu on nav click (if open)
+          if (!mobileMenu.classList.contains("hidden")) {
+            mobileMenu.classList.add("hidden");
+          }
+        }
+      });
+    });
+
+    animatedElements.forEach((el) => {
+      observer.observe(el);
+    });
+  </script>
+
+
+
+</body>
+
+</html>
